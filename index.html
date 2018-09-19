@@ -9,22 +9,70 @@
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/animate.css">
   
+<script type="text/javascript">
+
+var date=new Date();
+var year=date.getFullYear();
+var month=date.getMonth();
+var day=date.getDate(); 
+function SetDivContent() {
+    if (year==2018 && month==8) {
+        if (day==19) { 
+            document.getElementById("section_1").style.display="block";
+         
+            document.getElementById("section_2").style.display="none";
+        	document.getElementById("section_3").style.display="none";
+        	document.getElementById("section_4").style.display="none";
+        }
+        else if (day==20) { 
+        	   document.getElementById("section_1").style.display="block";
+        	document.getElementById("section_2").style.display="block";
+        	document.getElementById("section_3").style.display="none";
+        	document.getElementById("section_4").style.display="none";
+                    }
+        else if (day==21) { 
+        	document.getElementById("section_1").style.display="block";
+            document.getElementById("section_2").style.display="block";
+        	document.getElementById("section_3").style.display="block";
+        	document.getElementById("section_4").style.display="none";
+        }
+        else if (day>=22) { 
+            
+        	document.getElementById("section_1").style.display="block";
+            document.getElementById("section_2").style.display="block";
+        	document.getElementById("section_3").style.display="block";
+        	document.getElementById("section_4").style.display="block";
+        }
+    }
+    else if (year==2018 && month>=9) {
+        	document.getElementById("section_1").style.display="none";
+            document.getElementById("section_2").style.display="none";
+        	document.getElementById("section_3").style.display="none";
+        	document.getElementById("section_4").style.display="none";
+}
+</script>
+
+
 </head>
 
-<body>
+<body onload="SetDivContent()">
 
 
 	 <script src="js/wow.min.js"></script>
               <script>
               new WOW().init();
+
+        	
               </script>
+
+
 
 
 
   <h2 class=" heading wow pulse" >BOSM Gallery</h1>
 
 
-  <section id="section_1">
+  <div id="section_1">
   <h1 >DAY 1</h1>
   <div class="grid">  <!-- grid upper class then item then med at right and  large on both sides -->
     
@@ -61,13 +109,13 @@
       </div>
     </div>
 
-</div></section>
+</div></div>
 <br><br><br>
 
 <br><br><br>
 
 
-  <section id="section_2">
+  <div id="section_2">
    <h1 >DAY 2</h1>
   <div class="grid">  <!-- grid upper class then item then med at right and  large on both sides -->
     
@@ -104,7 +152,7 @@
       </div>
     </div>
 
-</div></section>
+</div></div>
     
 
 
@@ -123,7 +171,7 @@
 
 <br><br><br>
 
-  <section id="section_3">
+  <div id="section_3">
    <h1 >DAY 3</h1>
   <div class="grid">  <!-- grid upper class then item then med at right and  large on both sides -->
     
@@ -160,7 +208,7 @@
       </div>
     </div>
 
-</div></section>
+</div></div>
     
 
 
@@ -178,8 +226,8 @@
 
 <br><br><br>
 
-  <section id="section_4">
-   <h1 >DAY 4</h1>
+  <div id="section_4">
+   <h1 id="test" >DAY 4</h1>
   <div class="grid">  <!-- grid upper class then item then med at right and  large on both sides -->
     
 
@@ -215,7 +263,7 @@
       </div>
     </div>
 
-</div></section>
+</div></div>
     
 
 
